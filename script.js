@@ -101,6 +101,19 @@ var clickHandler=function(event){
             reload.addEventListener("click",()=>{location.reload()})
             bigBox.appendChild(reload)
         }
+        else{
+            var draw=1
+            for(var i=0;i<9;i++){
+                if(f[i]===0) draw=0
+            }
+            if(draw==1){
+                heading.innerHTML=`Match Draw !!!`
+                var reload=document.createElement("button")
+                reload.textContent="Restart"
+                reload.addEventListener("click",()=>{location.reload()})
+                bigBox.appendChild(reload)
+            }
+        }
     }
     console.log(f[temp-1])
 }
